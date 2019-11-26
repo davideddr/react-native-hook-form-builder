@@ -1,0 +1,28 @@
+{
+  "name": "react-native-hook-form-builder",
+  "version": "0.1.0",
+  "description": "Form builder with react native components build with react hook form",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "Da Rech Davide <davide.darech@gmail.com> (https://github.com/davideddr)",
+  "contributors": [
+    "Da Rech Davide <davide.darech@gmail.com> (https://github.com/davideddr)",
+    "Scagno Mattia"
+  ],
+  "license": "MIT",
+  "keywords": ["react", "react-native", "react-hook-form"],
+  "peerDependencies": {
+    "@react-native-community/datetimepicker": "^2.1.0",
+    "prop-types": "*",
+    "react-hook-form": "3.25.0",
+    "react-native-vector-icons": "^6.6.0",
+    "yup": "^0.27.0",
+    "lottie-ios": "^3.1.3",
+    "lottie-react-native": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1"
+  }
+}
