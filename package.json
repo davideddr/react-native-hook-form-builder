@@ -1,6 +1,6 @@
 {
   "name": "react-native-hook-form-builder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Form builder with react native components build with react hook form",
   "homepage": "https://github.com/davideddr/react-native-hook-form-builder",
   "bugs": {
@@ -18,8 +18,8 @@
   "author": "Da Rech Davide <davide.darech@gmail.com> (https://github.com/davideddr)",
   "contributors": [
     "Da Rech Davide <davide.darech@gmail.com> (https://github.com/davideddr)",
-    "Scagno Mattia",
-    "Davide Luchetta (https://github.com/ketz86)"
+    "Scagno Mattia <mattiascagno@gmail.com> (https://github.com/mattska)",
+    "Davide Luchetta <luchettad@gmail.com> (https://github.com/ketz86)"
   ],
   "license": "MIT",
   "keywords": ["react", "react-native", "react-hook-form"],

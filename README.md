@@ -1,4 +1,5 @@
 # React Native Hook Form Builder
+
 Simple and configurable form builder with react native components build with:
 
 ![Supports Android and iOS](https://img.shields.io/badge/platforms-android%20|%20ios-lightgrey.svg) ![MIT License](https://img.shields.io/npm/l/@react-native-community/slider.svg)
@@ -20,6 +21,7 @@ npm install react-native-hook-form-builder
 ```
 
 Follow the installation instructions of the dependencies:
+
 - [Datetimepicker](https://github.com/react-native-community/react-native-datetimepicker)
 - [Lottie](https://github.com/react-native-community/lottie-react-native)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
@@ -27,31 +29,31 @@ Follow the installation instructions of the dependencies:
 ## General Usage
 
 ```js
-import Form from 'react-native-hook-form-builder';
+import Form from "react-native-hook-form-builder";
 ```
 
 or
 
 ```js
-const Form = require('react-native-hook-form-builder');
+const Form = require("react-native-hook-form-builder");
 ```
 
 ### Base usage
 
 ```js
-import React from 'react';
-import {Alert, Text, SafeAreaView, ScrollView} from 'react-native';
-import Form from 'react-native-hook-form-builder';
+import React from "react";
+import { Alert, Text, SafeAreaView, ScrollView } from "react-native";
+import Form from "react-native-hook-form-builder";
 // JSON WITH FORM CONFIGURATION
-import appFormConfig from '../../utils/appFormConfig.json';
+import appFormConfig from "../../utils/appFormConfig.json";
 // CUSTOM FORM STYLE
-import formStyle from '../../utils/formStyle';
+import formStyle from "../../utils/formStyle";
 
 export default class App extends React.Component {
-  onSubmit = data => Alert.alert('Form Data', JSON.stringify(data));
+  onSubmit = data => Alert.alert("Form Data", JSON.stringify(data));
 
   onChangeCustom = (field, value) => {
-    if (field === 'firstName') {
+    if (field === "firstName") {
       return value.toUpperCase();
     }
     return value;
@@ -59,7 +61,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={{ flex: 1 }}>
         <ScrollView>
           <Text>Form Builder!</Text>
           <Form
@@ -77,21 +79,32 @@ export default class App extends React.Component {
 ```
 
 ## Props
-### `formConfig`
+
+### `formConfig (required)`
+
 JSON file with form configuration from a static file or via API.
+
 ### `mode`
+
 Event to trigger the submit of the form.
 Possible values are:
+
 - `"onSubmit"`
 - `"onBlur"`
 - `"onChange"`
 
 You can find more informations about the [React Hook Form](https://github.com/react-hook-form/react-hook-form) configuration at this [page](https://react-hook-form.com/api/#useForm).
-### `onSubmit`
+
+### `onSubmit (required)`
+
 This function is called when submit the form.
+
 ### `onChangeCustom`
+
 This function is called before set value of the field.
+
 ### `customStyles`
+
 JSON file with the custom style rules.
 
 In the `lib/utils/formStyle.js` file there is the list with the possible values to override.
@@ -99,12 +112,13 @@ In the `lib/utils/formStyle.js` file there is the list with the possible values 
 You can override a single filed style by adding the name of the configuration in the end of the name.
 
 For example if you have a filed with name `email` and i you want to change the style of the input text only for this element in the custom styles file you can add `inputTextEmail` key with the custom style rules.
+
 ```js
 const formStyle = {
   inputText: {
-    color: 'red',
-    marginBottom: 10,
-  },
+    color: "red",
+    marginBottom: 10
+  }
 };
 
 export default formStyle;
@@ -113,6 +127,7 @@ export default formStyle;
 ## Configuration
 
 Supported type of fileds:
+
 - email
 - password
 - text
@@ -126,9 +141,12 @@ You can dinamicaly show/hide fields via `showIf` property.
 In the value you have to add the name of the field you want to watch and the corrispondent value. Es=`"showIf": "terms-and-conditions=true"` to show a field when terms and conditions are accepted.
 
 ## Example
-Example with a registration form
+
+<details><summary>Example with a registration form</summary>
+
 ```json
 {
+  "showSubmit": true,
   "submitText": {
     "it": "Invia",
     "en": "Send",
@@ -138,8 +156,8 @@ Example with a registration form
     {
       "label": {
         "it": "Dati utente",
-        "en": "Dati utente",
-        "default": "Dati utente"
+        "en": "User data",
+        "default": "User data"
       },
       "children": [
         {
@@ -148,6 +166,7 @@ Example with a registration form
           "autoCompleteType": "email",
           "keyboardType": "email-address",
           "textContentType": "emailAddress",
+          "changeBackgroundOnFocus": true,
           "required": false,
           "icon": "at",
           "label": {
@@ -162,10 +181,34 @@ Example with a registration form
           },
           "validations": [
             { "name": "string" },
-            { "name": "required", "params": { "message": "Custom error message" } },
+            { "name": "required", "params": { "message": "Test" } },
             { "name": "email" }
           ],
           "showIf": "terms-and-conditions=true"
+        },
+        {
+          "type": "text",
+          "name": "username",
+          "autoCompleteType": "email",
+          "keyboardType": "email-address",
+          "textContentType": "emailAddress",
+          "required": false,
+          "iconLeft": "at",
+          "label": {
+            "it": "Username",
+            "en": "Username",
+            "default": "Username"
+          },
+          "placeholder": {
+            "it": "Username placeholder",
+            "en": "Username placeholder",
+            "default": "Username placeholder"
+          },
+          "validations": [
+            { "name": "string" },
+            { "name": "required", "params": { "message": "Test" } },
+            { "name": "email" }
+          ]
         },
         {
           "type": "password",
@@ -174,7 +217,7 @@ Example with a registration form
           "textContentType": "password",
           "secureTextEntry": true,
           "required": false,
-          "icon": "lock",
+          "iconLeft": "lock",
           "label": {
             "it": "Password",
             "en": "Password",
@@ -198,7 +241,7 @@ Example with a registration form
           "textContentType": "password",
           "secureTextEntry": true,
           "required": false,
-          "icon": "lock",
+          "iconLeft": "lock",
           "label": {
             "it": "Password Confirmation",
             "en": "Password Confirmation",
@@ -225,8 +268,8 @@ Example with a registration form
     {
       "label": {
         "it": "Informazioi personali",
-        "en": "Personal informations",
-        "default": "Personal informations"
+        "en": "Informazioi personali",
+        "default": "Informazioi personali"
       },
       "children": [
         {
@@ -272,7 +315,12 @@ Example with a registration form
             "it": "Data di nascita",
             "en": "Birthday date",
             "default": "Birthday date"
-          }
+          },
+          "minimumDate": "2019-10-25",
+          "maximumDate": "2019-10-30",
+          "iconRight": "arrow-down",
+          "iconSize": 15,
+          "iconColor": "#000"
         },
         {
           "type": "select",
@@ -282,6 +330,11 @@ Example with a registration form
             "it": "Etá",
             "en": "Age",
             "default": "Age"
+          },
+          "confirmLabel": {
+            "it": "Conferma",
+            "en": "Done",
+            "default": "Done"
           },
           "placeholder": {
             "it": "Etá",
@@ -299,9 +352,9 @@ Example with a registration form
             { "name": "string" },
             { "name": "required" }
           ],
-          "customIcon": "arrow-down",
-          "customIconSize": 15,
-          "customIconColor": "#000"
+          "iconRight": "arrow-down",
+          "iconSize": 15,
+          "iconColor": "#000"
         },
         {
           "type": "select",
@@ -311,6 +364,11 @@ Example with a registration form
             "it": "Sesso",
             "en": "Sex",
             "default": "Sex"
+          },
+          "confirmLabel": {
+            "it": "Conferma",
+            "en": "Done",
+            "default": "Done"
           },
           "placeholder": {
             "it": "Sesso",
@@ -356,9 +414,54 @@ Example with a registration form
             { "name": "bool" },
             { "name": "required" }
           ]
+        },
+        {
+          "type": "radio",
+          "name": "newsletter",
+          "label": {
+            "it": "Newsletter",
+            "en": "Newsletter",
+            "default": "Newsletter"
+          },
+          "items": [
+            { "label": "Yes", "value": true },
+            { "label": "No", "value": false }
+          ]
         }
       ]
     }
   ]
 }
 ```
+</details>
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/davideddr">
+        <img src="https://avatars2.githubusercontent.com/u/7225305?v=4" width="120px;" style="border-radius: 50%" alt="Davide Da Rech"/>
+        <br />
+        <sub><b>Davide Da Rech</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/mattska">
+        <img src="https://avatars2.githubusercontent.com/u/58304782?v=4" width="120px;" style="border-radius: 50%" alt="Mattia Scagno"/>
+        <br />
+        <sub><b>Mattia Scagno</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ketz86">
+        <img src="https://avatars0.githubusercontent.com/u/11291190?v=4" width="120px;" style="border-radius: 50%" alt="Davide Luchetta"/>
+        <br />
+        <sub><b>Davide Luchetta</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+<!-- ALL-CONTRIBUTORS-LIST:END -->
