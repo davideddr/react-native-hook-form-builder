@@ -1,5 +1,8 @@
 # React Native Hook Form Builder
 
+## 0.3.0
+- Added custom icon to text input and date picker components
+
 ## 0.2.0 (28-11-2019)
 - Possibility not to render form submit
 - If the label is not present, the text field is not rendered
