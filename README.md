@@ -86,15 +86,15 @@ export default class App extends React.Component {
 
 ### `formConfig (required)`
 
-JSON file with form configuration from a static file or via API.
+JSON file for form configuration retrieved by a static file or via API.
 
 ### `onSubmit (required)`
 
-This function is called when submit the form.
+This function is called when submited the form.
 
 ### `mode`
 
-Event to trigger the submit of the form.
+Event to trigger form submit.
 Possible values are:
 
 - `"onSubmit"`
@@ -109,13 +109,13 @@ This function is called before set value of the field.
 
 ### `customStyles`
 
-JSON file with the custom style rules.
+JSON file with custom style rules.
 
-In the `lib/utils/formStyle.js` file there is the list with the possible values to override.
+In `lib/utils/formStyle.js` file there is the list with the possible values to override.
 
-You can override a single filed style by adding the name of the configuration in the end of the name.
+You can override a single field style by adding configuration field key  at the end of the name.
 
-For example if you have a filed with name `email` and i you want to change the style of the input text only for this element in the custom styles file you can add `inputTextEmail` key with the custom style rules.
+For example if you have a field with name `email` and you want to change the style of input text only for this element, in the custom styles file you can add `inputTextEmail` key with custom style rules.
 
 ```js
 const formStyle = {
@@ -130,17 +130,19 @@ export default formStyle;
 
 ### `currentLocale`
 
-Current locale of the app, the default is the device language.
+App current locale.  
+
+Default value is device language.
 
 ### `customIcon`
 
-Personal icon component.
+Custom icon component.
 
 ### `defaultValues`
 
-Object with the default values.
+Object with default values.
 
-The keys are the name of the filed in the configuration file.
+The keys are the name of fields in configuration file.
 
 ```js
 {
@@ -153,11 +155,11 @@ The keys are the name of the filed in the configuration file.
 
 ### `defaultSelectValues`
 
-Object with the default array of values for the select.
+Object with default array of values for the select.
 
-You have to remove the `items` key from the configuration of the field.
+You have to remove `items` key from configuration of the field.
 
-The keys are the name of the filed in the configuration file.
+The keys are the name of fields in configuration file.
 
 ```js
 {
@@ -172,17 +174,23 @@ The keys are the name of the filed in the configuration file.
 
 ### `defaultTextModals`
 
-Object with the default string for the text of the modal.
+Object with default string for text of the modal.
 
-You have to remove the `text` key from the configuration of the field.
+You have to remove `text` key from configuration of the field.
 
-The keys are the name of the filed in the configuration file.
+The keys are the name of fields in configuration file.
 
 ```js
 {
   privacy: "Static text"
 }
 ```
+
+### `keyboardAwareScrollViewProps`
+
+Object with custom props for KeyboardAwareScrollView component.
+
+You can see the list of possible props [here](https://github.com/APSL/react-native-keyboard-aware-scroll-view#props).
 
 ## Configuration
 

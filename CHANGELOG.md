@@ -1,5 +1,8 @@
 # React Native Hook Form Builder
 
+## 0.4.1
+- Add custom props for KeyboardAwareScrollView component
+
 ## 0.4.0
 - Remove Lottie dependency for the checkbox component
 - Added KeyboardAwareScrollView component for scroll the view on the input on focus
