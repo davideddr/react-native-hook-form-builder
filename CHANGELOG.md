@@ -1,5 +1,11 @@
 # React Native Hook Form Builder
 
+## 0.4.0
+- Remove Lottie dependency for the checkbox component
+- Added KeyboardAwareScrollView component for scroll the view on the input on focus
+- Added default values for select and modal text
+- Possibility to open or not the modal on checkbox field
+
 ## 0.3.0
 - Added custom icon to text input and date picker components
 

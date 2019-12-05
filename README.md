@@ -6,7 +6,6 @@ Simple and configurable form builder with react native components build with:
 
 [![develop: React Hook Form](https://img.shields.io/badge/develop-🧾%20React%20Hook%20Form-2d2d2d.svg)](https://github.com/react-hook-form/react-hook-form)
 [![develop: Yup](https://img.shields.io/badge/validation%20schema-🚨%20Yup-2d2d2d.svg)](https://github.com/jquense/yup)
-[![develop: Lottie](https://img.shields.io/badge/animations-🍭%20Lottie-2d2d2d.svg)](https://github.com/react-native-community/lottie-react-native)
 
 ## Getting started
 
@@ -23,8 +22,13 @@ npm install react-native-hook-form-builder
 Follow the installation instructions of the dependencies:
 
 - [Datetimepicker](https://github.com/react-native-community/react-native-datetimepicker)
-- [Lottie](https://github.com/react-native-community/lottie-react-native)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+
+For the [KeyboardAwareScrollView](https://github.com/APSL/react-native-keyboard-aware-scroll-view) add in the `AndroidManifest.xml` under `android/app/src/main` this line:
+
+`android:windowSoftInputMode="adjustResize"`
+
+in the application tag.
 
 ## General Usage
 
@@ -84,6 +88,10 @@ export default class App extends React.Component {
 
 JSON file with form configuration from a static file or via API.
 
+### `onSubmit (required)`
+
+This function is called when submit the form.
+
 ### `mode`
 
 Event to trigger the submit of the form.
@@ -94,10 +102,6 @@ Possible values are:
 - `"onChange"`
 
 You can find more informations about the [React Hook Form](https://github.com/react-hook-form/react-hook-form) configuration at this [page](https://react-hook-form.com/api/#useForm).
-
-### `onSubmit (required)`
-
-This function is called when submit the form.
 
 ### `onChangeCustom`
 
@@ -122,6 +126,62 @@ const formStyle = {
 };
 
 export default formStyle;
+```
+
+### `currentLocale`
+
+Current locale of the app, the default is the device language.
+
+### `customIcon`
+
+Personal icon component.
+
+### `defaultValues`
+
+Object with the default values.
+
+The keys are the name of the filed in the configuration file.
+
+```js
+{
+  email: 'test@test.com',
+  firstName: 'Mario',
+  age: 21,
+  privacy: true,
+}
+```
+
+### `defaultSelectValues`
+
+Object with the default array of values for the select.
+
+You have to remove the `items` key from the configuration of the field.
+
+The keys are the name of the filed in the configuration file.
+
+```js
+{
+  eventDate: [
+    {label: 'Day 1', value: 18},
+    {label: 'Day 2', value: 19},
+    {label: 'Day 3', value: 20},
+    {label: 'Day 4', value: 21},
+  ]
+}
+```
+
+### `defaultTextModals`
+
+Object with the default string for the text of the modal.
+
+You have to remove the `text` key from the configuration of the field.
+
+The keys are the name of the filed in the configuration file.
+
+```js
+{
+  privacy: "Static text"
+}
 ```
 
 ## Configuration
@@ -385,6 +445,7 @@ In the value you have to add the name of the field you want to watch and the cor
           "type": "checkbox",
           "name": "privacy",
           "required": true,
+          "openModal": true,
           "label": {
             "it": "Privacy",
             "en": "Privacy",
