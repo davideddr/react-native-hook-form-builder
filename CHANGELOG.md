@@ -1,5 +1,8 @@
 # React Native Hook Form Builder
 
+## 0.6.0 (13-01-2020)
+- Fix problem with touchable icon in input text and modal components
+
 ## 0.5.0 (19-12-2019)
 - Fix problem with reference in select and datepicker
 
