@@ -1,5 +1,8 @@
 # React Native Hook Form Builder
 
+## 0.7.0 (14-01-2020)
+- Add placeholder to select picker
+
 ## 0.6.0 (13-01-2020)
 - Fix problem with touchable icon in input text and modal components
 
