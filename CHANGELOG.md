@@ -1,6 +1,9 @@
 # React Native Hook Form Builder
 
 ## 0.8.0 (21-01-2020)
+- Add missing prop to radio button component
+
+## 0.8.0 (21-01-2020)
 - Add description text on radio button component
 
 ## 0.7.0 (14-01-2020)
