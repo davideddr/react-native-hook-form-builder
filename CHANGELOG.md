@@ -1,5 +1,8 @@
 # React Native Hook Form Builder
 
+## 0.10.0 (11-02-2020)
+- Add new text only component
+
 ## 0.9.1 (08-02-2020)
 - Fix problem with ios device language
 
