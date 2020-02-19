@@ -1,5 +1,8 @@
 # React Native Hook Form Builder
 
+## 0.10.1 (19-02-2020)
+- Remove KeyboardAwareScrollView and add nestedScrollView for Android
+
 ## 0.10.0 (11-02-2020)
 - Add new text only component
 

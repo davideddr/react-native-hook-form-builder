@@ -1,6 +1,6 @@
 {
   "name": "react-native-hook-form-builder",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Form builder with react native components build with react hook form",
   "homepage": "https://github.com/davideddr/react-native-hook-form-builder",
   "bugs": {
@@ -29,7 +29,7 @@
     "react-hook-form": "3.25.0",
     "react-native-vector-icons": "^6.6.0",
     "yup": "^0.27.0",
-    "react-native-keyboard-aware-scroll-view": "^0.9.1",
+    "react-native-nested-scroll-view": "^9.0.0",
     "react-native-htmlview": "^0.15.0"
   },
   "devDependencies": {
