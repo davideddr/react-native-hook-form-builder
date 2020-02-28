@@ -138,6 +138,24 @@ Default value is device language.
 
 Custom icon component.
 
+For example, if you want to use FontAwesome5 instead of MaterialCommunityIcons,
+
+```js
+import Icon from 'react-native-vector-icons/FontAwesome5'
+
+<Form
+...
+...
+customIcon={Icon}
+showPasswordIconName="eye"
+hidePasswordIconName="eye-slash"
+/>
+```
+Additionally since we expect MaterialCommunityIcons as default,
+showPasswordIcon and hidePasswordIcon may have different names, thus to override
+those, you can specify the same to showPasswordIconName and hidePasswordIconName
+props.
+
 ### `defaultValues`
 
 Object with default values.
