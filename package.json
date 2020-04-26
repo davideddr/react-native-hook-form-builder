@@ -26,7 +26,7 @@
   "peerDependencies": {
     "@react-native-community/datetimepicker": "^2.1.0",
     "prop-types": "*",
-    "react-hook-form": "3.25.0",
+    "react-hook-form": "^4.9.8",
     "react-native-vector-icons": "^6.6.0",
     "yup": "^0.27.0",
     "react-native-nested-scroll-view": "^9.0.0",
