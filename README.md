@@ -24,12 +24,6 @@ Follow the installation instructions of the dependencies:
 - [Datetimepicker](https://github.com/react-native-community/react-native-datetimepicker)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 
-For the [KeyboardAwareScrollView](https://github.com/APSL/react-native-keyboard-aware-scroll-view) add in the `AndroidManifest.xml` under `android/app/src/main` this line:
-
-`android:windowSoftInputMode="adjustResize"`
-
-in the application tag.
-
 ## General Usage
 
 ```js
@@ -130,7 +124,7 @@ export default formStyle;
 
 ### `currentLocale`
 
-App current locale.  
+App current locale.
 
 Default value is device language.
 
@@ -204,23 +198,18 @@ The keys are the name of fields in configuration file.
 }
 ```
 
-### `keyboardAwareScrollViewProps`
-
-Object with custom props for KeyboardAwareScrollView component.
-
-You can see the list of possible props [here](https://github.com/APSL/react-native-keyboard-aware-scroll-view#props).
-
 ## Configuration
 
 Supported type of fileds:
 
 - email
 - password
-- text
+- text input
 - date
 - select
 - checkbox
 - radio
+- only text (for disclaimer or privacy policy text)
 
 You can dinamicaly show/hide fields via `showIf` property.
 
