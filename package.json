@@ -22,17 +22,22 @@
     "Davide Luchetta <luchettad@gmail.com> (https://github.com/ketz86)"
   ],
   "license": "MIT",
-  "keywords": ["react", "react-native", "react-hook-form"],
+  "keywords": [
+    "react",
+    "react-native",
+    "react-hook-form"
+  ],
   "peerDependencies": {
-    "@react-native-community/datetimepicker": "^2.1.0",
+    "@react-native-community/datetimepicker": "^2.3.2",
     "prop-types": "*",
-    "react-hook-form": "^4.9.8",
-    "react-native-vector-icons": "^6.6.0",
-    "yup": "^0.27.0",
+    "react-hook-form": "^5.6.0",
+    "react-native-htmlview": "^0.15.0",
     "react-native-nested-scroll-view": "^9.0.0",
-    "react-native-htmlview": "^0.15.0"
+    "react-native-vector-icons": "^6.6.0",
+    "yup": "^0.28.4"
   },
   "devDependencies": {
-    "eslint": "^6.5.1"
+    "eslint": "^6.8.0",
+    "eslint-plugin-react-hooks": "^3.0.0"
   }
 }
