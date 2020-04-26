@@ -1,5 +1,8 @@
 # React Native Hook Form Builder
 
+## 0.11.0 (26-04-2020)
+- Update dependencies and rewrite all components with react hooks
+
 ## 0.10.1 (19-02-2020)
 - Remove KeyboardAwareScrollView and add nestedScrollView for Android
 
