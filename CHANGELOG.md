@@ -1,5 +1,8 @@
 # React Native Hook Form Builder
 
+## 0.11.3 (20-01-2021)
+- Fix TextInput default value problem
+
 ## 0.11.0 (26-04-2020)
 - Update dependencies and rewrite all components with react hooks
 
