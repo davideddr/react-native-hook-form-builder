@@ -1,5 +1,9 @@
 # React Native Hook Form Builder
 
+## 0.11.4 (13-07-2021)
+- Remove nestedScrollView
+- Update Checkbox and TextModal component
+
 ## 0.11.3 (20-01-2021)
 - Fix TextInput default value problem
 
